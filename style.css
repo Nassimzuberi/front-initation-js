@@ -6,6 +6,7 @@ body {
     --third: #FFB270 ;
     background: var(--primary);
     overflow-x: hidden;
+    font-family: 'Calibri Light', cursive;
 }
 *{
     box-sizing: border-box;
@@ -19,7 +20,11 @@ main{
     align-items: center;
 
 }
-
+button {
+    border:none;
+    color:white;
+    border-radius: 15px;
+}
 .menu {
     background: rgba(0,0,0,0.1);
     text-align: center;
@@ -54,51 +59,72 @@ main{
     width: 100%;
 }
 .param-window{
+    display: none;
     transform: translateY(10px);
     opacity: 0;
     transition: all 0.4s;
 }
 
 .param-active {
+    display: block;
     transform: translateY(0);
-    z-index: auto;
     opacity: 1;
+    transition: all 0s 1s;
 }
 button:hover {
     cursor: pointer;
 }
 
 .param{
-    color:#333;
     width:300px;
     background: var(--third);
     border: none;
     font-size:1.5em;
     padding: 0.5em 0.3em;
-    margin-bottom:1em;
+    margin-top:1em;
+    transition: all 0.4s;
 }
-
+.param-window {
+    margin-top:15px;
+}
 .button-active{
-    color:white;
+    background: inherit;
+    transition: all 0.4s;
+    background: inherit;
 }
 
 #save {
     font-size:1.2em;
     background: #53a653;
-    margin:1em 0;
-    padding: 0.5em 2em;
+    margin:0.5em 0;
+    padding: 0.3em 2em;
     color:white;
     border:none;
 }
 
-.plage {
-    font-size: 2em;
+.param-window input {
+    padding:10px 15px;
+}
+
+.param-window .form-group {
+    margin:1em 0;
 }
 .game {
     width:50%;
     background: rgba(0,0,0,0.1);
     padding: 2em;
     text-align: center;
+    position: relative;
+}
+
+.game .back {
+    position: absolute;
+    top:15px;
+    right:15px;
+    width: 25px;
+}
+.back:hover {
+    cursor: pointer;
 }
 .game form {
     display: flex;

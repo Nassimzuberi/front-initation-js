@@ -3,7 +3,6 @@ window.onload = () => {
     const game = document.getElementById("game");
     const paramButton = document.getElementById("param");
     const paramWindow = document.getElementById("param-window")
-    const plageWindow = document.getElementById("plage")
     const saveButton = document.getElementById("save")
     const plageGame = document.getElementsByClassName("plageNb")[0]
     const param = {
@@ -20,7 +19,6 @@ window.onload = () => {
     loadParam()
         //load les paramètres
     function loadParam() {
-        plageWindow.innerHTML = param.min + " et " + param.max;
         plageGame.innerHTML = param.min + " et " + param.max;
         inputMin.value = param.min
         inputMax.value = param.max
@@ -62,6 +60,7 @@ window.onload = () => {
         setTimeout(function(){
             menu.hidden = true;
             game.hidden = false
+
         }, 1000);
         //déclare un nombre aléatoire
        randomNb = Math.floor(Math.random() * (param.max - param.min) + param.min);
@@ -106,8 +105,11 @@ window.onload = () => {
         winpanel.hidden = false
         param.nbTry = 0
     }
-
-    const backButtonWin = document.getElementsByClassName("back")[0]
+    const backButtonGame = document.getElementsByClassName("back")[0]
+    backButtonGame.onclick = () => {
+        backMenu(game)
+    }
+    const backButtonWin = document.getElementsByClassName("back")[1]
     backButtonWin.onclick = () => {
         backMenu(winpanel)
     }
