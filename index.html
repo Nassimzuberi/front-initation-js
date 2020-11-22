@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Plus Grand Plus Petit</title>
+</head>
+<body >
+<main>
+    <div class="home">
+        <div class="menu">
+            <h1>Plus Grand ou Plus Petit</h1>
+            <h2>Un jeu Hetic</h2>
+            <div class="rules">
+                <h2>Règles du jeu</h2>
+                <ol>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aspernatur?</li>
+                    <li>Ad autem dolor doloremque iusto nesciunt obcaecati quisquam repellendus soluta.</li>
+                    <li>Aspernatur beatae excepturi incidunt inventore necessitatibus odit quo suscipit voluptatum.</li>
+                    <li>Accusantium blanditiis consectetur doloremque labore quas quia, recusandae sint voluptates?</li>
+                    <li>Cum enim expedita minima, odit placeat recusandae repellendus ullam veniam.</li>
+                </ol>
+            </div>
+            <p class="plage" >Plage de recherche entre : <span id="plage"></span></p>
+
+            <button type="button" class="play" id="play">JOUER</button>
+
+            <button type="button" class="param" id="param">Paramètres</button>
+            <div class="param-window" id="param-window">
+                <div class="form-group">
+                    <input type="number" class="min" placeholder="Min" id="min">
+                    <input type="number" class="max" placeholder="Max" id="max">
+                </div>
+
+                <button type="button" id="save">Enregistrer</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="game fadeIn" id="game" hidden>
+        <h2>Jeu lancé !!!</h2>
+        <form action="" id="try">
+            <p class="plage" >Plage de recherche entre : <span class="plageNb"></span></p>
+
+            <h3>Essai n° <span id="nbTry"></span> </h3>
+            <input type="number" id="nb" placeholder="Tapez un nombre">
+            <button type="submit" class="button-try">Essayer</button>
+        </form>
+        <div class="message" id="message">
+        </div>
+    </div>
+
+    <div class="winpanel fadeIn" id="winpanel" hidden>
+        <h2>BRAVOOOO !!! Vous avez réussi à trouver le nombre mystère</h2>
+        <button class="retry">Rejouer</button>
+        <button class="back">Retour au menu</button>
+    </div>
+
+
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>

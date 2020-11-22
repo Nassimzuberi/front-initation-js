@@ -1,0 +1,209 @@
+body {
+    margin: auto;
+
+    --primary : #F08E6B;
+    --secondary: #FF7575;
+    --third: #FFB270 ;
+    background: var(--primary);
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+main{
+    height:100vh;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu {
+    background: rgba(0,0,0,0.1);
+    text-align: center;
+    width: 750px;
+    padding:1em  2em;
+}
+.menu h1{
+    font-size:3.5em;
+    margin-bottom:0;
+}
+.menu h2,.game h2{
+    font-size:2em;
+    margin-top:0;
+    color:var(--third)
+}
+
+.rules {
+    background: rgba(0,0,0,0.1);
+    text-align: left;
+    padding:2em;
+}
+
+.play {
+    color:white;
+    font-size:2em;
+    background: var(--secondary);
+    padding: 1em;
+    border-radius: 5px;
+    border: none;
+    margin: 1em 0em;
+    display: block;
+    width: 100%;
+}
+.param-window{
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.param-active {
+    transform: translateY(0);
+    z-index: auto;
+    opacity: 1;
+}
+button:hover {
+    cursor: pointer;
+}
+
+.param{
+    color:#333;
+    width:300px;
+    background: var(--third);
+    border: none;
+    font-size:1.5em;
+    padding: 0.5em 0.3em;
+    margin-bottom:1em;
+}
+
+.button-active{
+    color:white;
+}
+
+#save {
+    font-size:1.2em;
+    background: #53a653;
+    margin:1em 0;
+    padding: 0.5em 2em;
+    color:white;
+    border:none;
+}
+
+.plage {
+    font-size: 2em;
+}
+.game {
+    width:50%;
+    background: rgba(0,0,0,0.1);
+    padding: 2em;
+    text-align: center;
+}
+.game form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20%;
+}
+
+input {
+    padding: 1.3em;
+    border: none;
+    background: rgba(0,0,0,0.1);
+    border-radius: 15px;
+    color:white;
+}
+
+::placeholder {
+    color: white;
+}
+.button-try ,.retry{
+    color:white;
+    font-size:1.2em;
+    background: var(--secondary);
+    padding: 0.3em;
+    border-radius: 5px;
+    border: none;
+    margin: 1em 0em;
+}
+.message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.message img {
+    width:150px;
+}
+
+.winpanel {
+    text-align: center;
+}
+.back{
+    color:#fff;
+    background: var(--third);
+    border: none;
+    font-size:1.2em;
+    padding: 0.3em;
+    border-radius: 5px;
+}
+.fadeOutRight {
+    animation: fadeRight 1s;
+    animation-fill-mode: forwards;
+}
+.fadeOutLeft {
+    animation: fadeLeft 1s;
+    animation-fill-mode: forwards;
+}
+
+.fadeOut {
+    animation: fadeout 1s;
+    animation-fill-mode: forwards;
+}
+
+.fadeIn {
+    animation: fadeout 1s reverse;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+        display: block;
+    }
+    10%{
+        transform: translateX(10px);
+        opacity: 1;
+
+    }
+    100% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+}
+@keyframes fadeRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    10%{
+        transform: translateX(-10px);
+        opacity: 1;
+
+    }
+    100% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
